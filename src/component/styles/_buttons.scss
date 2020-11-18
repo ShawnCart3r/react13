@@ -1,0 +1,52 @@
+.btn {
+    cursor: pointer;
+    display: inline-flex;
+    &:focus {
+      outline: none;
+    }
+  
+    &--refresh {
+      margin-top: 1rem;
+      margin-left: 1.5rem;
+    }
+  
+    &--more {
+      width: 11.5rem;
+      height: 3.9rem;
+      padding-left: 2rem;
+      align-items: center;
+      padding-right: .4rem;
+      border-radius: 2.8rem;
+      justify-content: space-between;
+      font-weight: var(--weight-bold);
+      background-color: var(--color-white);
+      @media (min-width: 768px) {
+        height: 5.6rem;
+        // avoid height change on animation
+        min-height: 5.6rem;
+        width: 14.6rem;
+        padding-left: 2.5rem;
+        padding-right: .9rem;
+      }
+      @media (min-width: 1024px) {
+        padding-left: 2.1rem;
+      }
+  
+      img {
+        width: 3.2rem;
+        height: 3.2rem;
+        transform: rotate(180deg);
+        transition: var(--transition) transform;
+        @media (min-width: 768px) {
+          width: 4rem;
+          height: 4rem;
+        }
+      }
+  
+      &.active {
+        img {
+          transform: rotate(0deg);
+        }
+      }
+    }
+  }
